@@ -1,0 +1,46 @@
+//FONT VARIABLES 
+$font-poppins: 'Poppins', sans-serif;
+
+//COLOR VARIABLES
+$color-primary-1: #4776e6;
+$color-primary-2: #8e54e9;
+
+$color-secondary-dark: #25005e;
+$color-secondary-light: #4d00c4;
+
+$color-white-main: #fff;
+$color-grey-dark: #333;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$shadow-dark-1: 0 3rem 3rem rgba(#000,.2);
+
+
+//RESPONSIVE DESIGN MEDIA QUERIES
+$bp-largest: 77.38em; // 1238px
+$bp-large: 62.25em; //1200px
+$bp-small: 43.75em; // 630px 
+$bp-smallest: 25em; //400px
+
+
+*, 
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%; // 1rem = 10px 
+}
+
+body{
+    box-sizing: border-box;
+    font-family: $font-poppins;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $color-secondary-dark;
+}
+

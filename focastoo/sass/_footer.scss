@@ -1,0 +1,217 @@
+.footer{
+    background-color: $color-secondary-dark;
+    color: $color-white-main;
+    padding: 10rem 5rem;
+
+
+  
+    &__box{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+        @media only screen and (max-width: $bp-large){
+           flex-direction: column;
+           text-align: center;
+
+        }
+    }
+
+    &__list{
+        display: flex;
+
+        @media only screen and (max-width: $bp-large){
+            flex-direction: column;
+            margin: 2rem 0;
+ 
+         }
+     
+    }
+
+    &__logo{
+        width: 15rem;
+    }
+
+    &__items{
+        list-style: none;
+        
+        @media only screen and (max-width: $bp-large){
+            margin: 1rem 0;
+        
+         }
+    }
+    &__links{
+        color: $color-white-main;
+        font-size: 1.5rem;
+        margin: 0 2rem;
+        text-decoration: none;
+
+
+    }
+}
+
+.social__icons{
+    color: orange;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1.6rem;
+
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 1.4rem; 
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.671);
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+     
+    }
+
+    &:target &__content{
+        transform: translate(-50%, -50%) scale(1);
+        transition: .4s ease;
+    }
+
+
+    &__content{
+        width: 60%;
+        
+        border-radius: 10px;
+        background-color: $color-white-main;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.7);
+        text-align: center;
+        padding: 1rem 3rem;
+
+
+        @media only screen and(max-width: $bp-large){
+            width: 90%;
+        }
+    
+    }
+
+    &__close{
+        position: absolute;
+        right: 2rem;
+
+        &-btn{
+            display: inline-block;
+            font-size: 3rem;
+            color: $color-secondary-dark;
+            text-decoration: none;
+        }
+    }
+
+    &__input{
+        width: 30rem;
+        height: 4rem;
+        padding: 2rem 1.5rem;
+        font-family: inherit;
+        border-radius: 100px;
+
+        @media only screen and(max-width: $bp-large){
+            width: 20rem;
+            margin-bottom: 2rem;
+        }
+    
+    }
+
+    &__icon{
+        width: 12rem;
+    }
+
+    &__weather-result{
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    &__result-name{
+        font-size: 1.5rem;
+        margin: 0 2rem;
+        background-color: orange;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+
+        @media only screen and(max-width: $bp-small){
+            display: block;
+        }
+    }
+
+    &__result-weather{
+        font-size: 1.5rem;
+        margin-right: 6rem;
+        border: 1px solid $color-secondary-dark;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+
+        
+        @media only screen and(max-width: $bp-small){
+            display: block;
+            margin-right: 0;
+            margin-top: 2rem;
+        }
+    }
+}
+
+
+//APP PRELOADER 
+.preloader{
+    background-color: $color-white-main;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1500;
+
+    transition: all .3s ease-out;
+    
+    &__content{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__img{
+        display: inline-block;
+        width: 18rem;
+        animation: preloaderimg 1s linear infinite;
+    }
+
+    &__stop{
+        opacity: 0;
+        visibility: hidden;
+
+    }
+}
+
+
+@keyframes preloaderimg{
+    0%{
+        transform: scale(.9);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+}

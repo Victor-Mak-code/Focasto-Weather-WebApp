@@ -1,0 +1,79 @@
+.testimonials{
+    background-color: $color-grey-light-2;
+    padding: 10rem 5rem;
+
+    &__box{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        transition: all  .3s ease-in-out;
+
+        @media only screen and (max-width: $bp-small){
+            flex-direction: column;
+        }
+
+    }
+
+
+
+    &--1{
+        background-color: $color-white-main;
+        margin: 2rem 3rem;
+        padding: 3rem;
+        box-shadow: $shadow-dark-1;
+        border-radius: 5px;
+        
+    }
+
+    &__img{
+        width: 7rem;
+        border-radius: 100px;
+
+    }
+
+    &__name{
+        font-size:  1.5rem;
+        font-weight: 600;
+
+       
+    }
+
+
+    &-box1{
+        animation: moveInLeft 2s ease;
+        animation-delay: 4s;
+    }
+
+    &-box2{
+        animation: moveInRight 1s ease;
+        animation-delay: 4s;
+    }
+}
+
+
+@keyframes moveInLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+       
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes moveInRight{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+       
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

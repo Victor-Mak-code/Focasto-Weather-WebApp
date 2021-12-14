@@ -1,0 +1,219 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-white-main;
+    box-shadow: 1rem 2rem 4rem rgba(0,0,0,.05);
+    padding: 3rem 0;
+
+ 
+
+    &__logo{
+        width: 15rem;
+    }
+}
+
+.navbar{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    @media only screen and (max-width: $bp-large){
+        display: none;
+     }
+    &__list{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &__items{
+        margin: 0 1.5rem;
+    }
+
+    &__links:visited,
+    &__links:link{
+        display: inline-block;
+        text-decoration: none;
+        color: $color-secondary-dark;
+        transition: transform .3s ease-in-out;
+        
+        &:hover {
+            transform: scale(1.1);
+         }
+
+         &:active {
+            transform: translateY(-5px);
+         }
+    }
+
+}
+
+.btn{
+    display: inline-block;
+    background-color: $color-secondary-dark;
+    color: $color-white-main;
+    padding: 1rem 3rem;
+    border-radius: 100px;
+    transition: all .2s ease;
+    text-decoration: none;
+    font-size: 1.3rem;
+
+  
+
+    @media only screen and (max-width: $bp-smallest){
+        font-size: 1rem;
+    }
+
+   &-news{
+    @media only screen and (max-width: $bp-small){
+        display: none;
+     }
+   }
+
+    &:hover{
+        background-color: $color-secondary-dark;
+        transform: scale(1.06);
+    }
+}
+
+
+//MOBILE VIEW NAVBAR
+.mob{
+
+    &__nav{
+        display: none;
+        
+        @media only screen and (max-width: $bp-large){
+            display: block;
+         }
+
+    }
+
+    &__label{
+    
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: fixed;
+       text-align: center;
+       top: 5%;
+       right: 2rem;
+       z-index: 20;
+       box-shadow: $shadow-dark-1;
+       color: $color-white-main;
+ 
+       @media only screen and (max-width: $bp-large){
+        top: 3.5%;
+     }
+
+     @media only screen and (max-width: $bp-small){
+        top: 4%;
+     }
+     
+      
+    }
+
+    &__icon{
+        display: block;
+        width: 2rem;
+        height: .3rem;
+        border-radius: 5px;
+        background-color: $color-white-main;
+        margin: 1.4rem .9rem;
+        cursor: pointer;
+        
+       
+    }
+    &__icon::before,
+    &__icon::after{
+        content: "";
+        display: block;
+        width: 2rem;
+        height: .3rem;
+        border-radius: 5px;
+        background-color: $color-white-main;
+        margin: .5rem 0;
+
+    
+    
+    }
+    
+    &__icon::before{
+        margin-top: 1rem;
+    }
+
+    &__bg{
+        background-color: orange;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    &__button:checked ~ &__navbar{
+        transform: scale(80);
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__button{
+        display: none;
+    }
+ 
+
+    &__navbar{
+        background-color: $color-secondary-dark;
+        position: fixed;
+        right: 2rem;
+        top: 6%;
+        width: 4rem;
+        height: 4rem;
+        z-index: 10;
+        border-radius: 50%;
+       
+        transition: all 1s ease-in;
+        
+
+        
+    @media only screen and (max-width: $bp-large){
+        top: 4%;
+        
+     }
+
+     @media only screen and (max-width: $bp-small){
+        top: 5%;
+     }
+        
+    }
+
+    &__navigation{
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+
+    &__button:checked ~ &__navigation{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__nav--lists{
+        margin: 2rem 0;
+        list-style: none;
+       
+    }
+
+    
+    &__nav--links{
+        color: $color-white-main;
+        font-size: 2rem;
+        text-decoration: none;
+       
+    }
+}
+
+

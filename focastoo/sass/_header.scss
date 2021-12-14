@@ -1,0 +1,125 @@
+.header{
+    color: $color-grey-dark;
+    padding: 2rem 6rem;
+    background-color: $color-grey-light-1;
+
+    @media only screen and (max-width: $bp-large){
+        padding: 2rem 2rem;
+    }
+
+
+
+    &__box{
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-small){
+            flex-direction: column;
+        }
+
+
+    }
+   
+    
+    &__home--text{
+        margin: 0 auto; 
+        
+        @media only screen and (max-width: $bp-small){
+            margin: 2rem 0; 
+        }     
+    }
+
+
+    &__img{
+        width: 43%;
+        margin: 0 auto;
+
+        @media only screen and (max-width: $bp-small){
+            width: 85%;
+            margin: 4rem 0;
+        }
+    }
+
+    &__btn{
+        animation: btn-scale .9s linear infinite ;
+        border-radius: 5px;
+        font-size: 1.5rem;
+    }
+
+}
+
+
+// HEADING TAGS STYLES
+
+.heading{
+    
+
+    &__span-1{
+        display: block;
+        font-size: 3rem;
+
+        @media only screen and (max-width: $bp-small){
+            font-size: 2.3rem;
+        }
+        
+    }
+
+    &__span-2{
+        display: block;
+        font-weight: 600;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+
+        
+        @media only screen and (max-width: $bp-small){
+            font-size: 2.3rem;
+        }
+
+    }
+
+
+    &-2{
+        font-size: 2.3rem;
+        text-align: center;
+        font-weight: 600;
+        color: $color-grey-dark;
+    }
+
+    &-3{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    &-4{
+        font-size: 2.3rem;
+
+        @media only screen and (max-width: $bp-large){
+            font-size: 1.7rem;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            font-size: 1.7rem;
+        }
+
+        
+    }
+
+    
+
+}
+
+
+@keyframes btn-scale {
+    0%{
+        transform: scale(1);
+       
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+
+
+
